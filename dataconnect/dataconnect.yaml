@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "React_tutorial_olx_clone-main"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "React_tutorial_olx_clone-main-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

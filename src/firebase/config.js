@@ -1,16 +1,24 @@
-import firebase from "firebase";
-import 'firebase/auth'
-import 'firebase/firebase'
-import 'firebase/storage'
- // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-    apiKey: "AIzaSyC_gdq4JbFYvvdAFeygIkp8EAm525V2F-Q",
-    authDomain: "fir-b1e35.firebaseapp.com",
-    projectId: "fir-b1e35",
-    storageBucket: "fir-b1e35.firebasestorage.app",
-    messagingSenderId: "177922214673",
-    appId: "1:177922214673:web:ba106505079dc6cdb51ab0",
-    measurementId: "G-GVWLVLEWP8"
-  };
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/storage";
+import 'firebase/firestore'
 
-  export  default firebase.initializeApp(firebaseConfig)
+const firebaseConfig = {
+  apiKey: "AIzaSyDN1AYer-bmVQV1wUOXL5dVAr3tftrQdkw",
+  authDomain: "olx-clone-react-9debf.firebaseapp.com",
+  projectId: "olx-clone-react-9debf",
+  storageBucket: "olx-clone-react-9debf.appspot.com",
+  messagingSenderId: "632491105253",
+  appId: "1:632491105253:web:3100af431c427c1ce36d0c",
+  measurementId: "G-X1KT9EXP32",
+};
+
+
+// Initialize Firebase
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db=firebaseApp.firestore()
+const auth=firebase.auth()
+const storage=firebase.storage()
+export {db,auth,storage}
+// Export for usage
+export default firebaseApp;

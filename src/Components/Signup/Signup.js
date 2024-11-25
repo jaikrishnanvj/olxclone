@@ -3,6 +3,7 @@ import { FirebaseContext } from '../../Store/Context';  // Ensure correct import
 import Logo from '../../olx-logo.png';
 import {useHistory} from 'react-router-dom'
 import './Signup.css';
+import { Link } from 'react-router-dom';
 
 export default function Signup() {
   const history=useHistory()
@@ -84,7 +85,7 @@ export default function Signup() {
           <br />
           <button>Signup</button>
         </form>
-        <a>Login</a>
+        <Link to="/login">Login</Link>
       </div>
     </div>
   );

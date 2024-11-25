@@ -1,5 +1,6 @@
 import React, {useContext,useState} from 'react';
 import { FirebaseContext } from '../../Store/Context';
+import { Link } from 'react-router-dom';
 
 import Logo from '../../olx-logo.png';
 import './Login.css';
@@ -48,7 +49,7 @@ function Login() {
   <button>Login</button>
 </form>
 
-        <a>Signup</a>
+<Link to="/signup">Signup</Link>
       </div>
     </div>
   );

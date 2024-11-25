@@ -3,7 +3,9 @@ import { BrowserRouter as Router,Route } from 'react-router-dom';
 import Login from './Pages/Login'
 import Create from './Pages/Create'
 import Signup from './Pages/Signup'
+import View from './Pages/ViewPost'
 import './App.css';
+import Post from './Store/postContext';
 /**
  * ?  =====Import Components=====
  */
@@ -20,12 +22,15 @@ function App() {
   })
   return (
     <div>
+      <Post>
        <Router>
         <Route exact path='/' component={Home} />
         <Route path='/signup' component={Signup} />
         <Route path='/login' component={Login} />
         <Route path='/create' component={Create} />
+        <Route path='/view' component={View} />
       </Router>
+      </Post>
     </div>
   );
 }
